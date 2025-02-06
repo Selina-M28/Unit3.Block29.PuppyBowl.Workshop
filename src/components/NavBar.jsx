@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom"
 
 function NavBar() {
   return (
-    <div>NavBar</div>
+    <header>
+        <nav>
+    <Link to="/">Home</Link>
+    <Link to="/players/:id">Player Details</Link>
+    <Link to="/NewPlayerForm">Submit New Player</Link>
+    </nav>
+    </header>
+    
   )
 }
 
