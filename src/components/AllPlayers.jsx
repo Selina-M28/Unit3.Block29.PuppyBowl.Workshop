@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import SinglePlayer from "./SinglePlayer";
 
 function AllPlayers() {
   const [players, setPlayers] = useState([]);
@@ -26,9 +27,10 @@ function AllPlayers() {
 function Player({ player }) {
   return (
     <div className="AllPlayers">
-    <img src={player.imageUrl} alt={`Image of ${player.name}`}/>
+    <p><img src={player.imageUrl} alt={`Image of ${player.name}`}/></p>
     <p>{player.name}</p>
     <p>{player.breed}</p>
+    <button>Player Details</button>
     </div>
   );
 }

@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.AllPlayers {
+  display:flex;
+  flex-direction: column;
+  border: 1px solid black;
+  align-self: auto;
+  
+  
+}
+
+img {
+  max-width: 50%;
+}
