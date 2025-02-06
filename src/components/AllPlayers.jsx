@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import SinglePlayer from "./SinglePlayer";
 
@@ -25,8 +25,6 @@ function AllPlayers() {
     setDisplayedPlayers(results);
   };
 
-  //   console.log(results);
-
   return (
     <div>
       <label>
@@ -48,7 +46,10 @@ function Player({ player }) {
       </p>
       <p>{player.name}</p>
       <p>{player.breed}</p>
+      <Link to ={`players/${player.id}`}>
       <button>Player Details</button>
+      </Link>
+      
     </div>
   );
 }
