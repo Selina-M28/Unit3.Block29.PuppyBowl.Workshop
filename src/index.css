@@ -10,11 +10,11 @@ body {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  align-self: auto;
 }
 
 img {
-  max-width: 50%;
+  width: 100%;
+  height: auto;
 }
 
 h1 {
@@ -32,11 +32,14 @@ h1 {
 .header {
   display: flex;
   justify-content: space-evenly;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .search-box {
-  text-align: center;
-  margin: 30%;
+  display: flex;
+  justify-content: center;
 }
 
 .search-box2 {
@@ -54,17 +57,34 @@ form {
 .add-player-button {
   margin: 10px;
   padding: 2px;
+  display: flex;
+}
+
+.player-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-sizing: border-box;
 }
 
 .all-players {
-  margin: 20px;
-  padding: 10px;
-  border: 1px solid black;
+  border: 2px solid rgb(79, 43, 43);
+  background-color: rgb(160, 194, 160);
+  text-align: center;
+  gap: 1ch;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  width: 400px;
+  height: auto;
 }
 
 .player-image {
-  width: 25%;
-  height: 25%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
 }
 
 .single-player-details {

@@ -26,9 +26,14 @@ const NewPlayerForm = ({onAddPlayer}) => {
           },
         }
       );
-
       console.log("Player added:", response.data);
-      onAddPlayer(response.data.data.player);
+      const newPlayer = response.data.data.newPlayer;
+
+      if (!newPlayer) {
+        console.error("Invalid player data:", response.data);
+        return; 
+      }
+      onAddPlayer(newPlayer);
 
       setName("");
       setBreed("");

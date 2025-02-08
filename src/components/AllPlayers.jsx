@@ -20,6 +20,14 @@ function AllPlayers() {
       .catch((err) => console.error(err));
   }, []);
 
+  // useEffect(() => {
+  //   console.log("Players state updated:", players);
+  // }, [players]);
+
+  // useEffect(() => {
+  //   console.log("Displayed players state updated:", displayedPlayers);
+  // }, [displayedPlayers]);
+
   const handleInput = (e) => {
     const results = players.filter((player) =>
       player.name.toLowerCase().includes(e.target.value.toLowerCase())
@@ -34,6 +42,8 @@ function AllPlayers() {
   };
 
   const handleAddPlayer = (newPlayer) => {
+    console.log("Received new player:", newPlayer);
+  
     setPlayers((prevPlayers) => [...prevPlayers, newPlayer]);
     setDisplayedPlayers((prevPlayers) => [...prevPlayers, newPlayer]);
   };
@@ -43,12 +53,16 @@ function AllPlayers() {
       <NewPlayerForm onAddPlayer={handleAddPlayer} />
       <div>
         <label className="search-box">
-          Search:
+          <b>Search:</b>
           <input className="search-box2" type="text" onChange={handleInput} />
         </label>
-        {displayedPlayers.map((player) => (
+        {displayedPlayers.length > 0 ? (
+        displayedPlayers.map((player) => (
           <Player key={player.id} player={player} onDelete={handleDelete} />
-        ))}
+        ))
+      ) : (
+        <p>Loading players...</p>
+      )}
       </div>
     </div>
   );
