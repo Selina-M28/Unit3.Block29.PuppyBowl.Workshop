@@ -3,15 +3,82 @@
   margin: 0;
 }
 
+body {
+  background-color: rgb(202, 186, 166);
+}
 .AllPlayers {
-  display:flex;
+  display: flex;
   flex-direction: column;
   border: 1px solid black;
   align-self: auto;
-  
-  
 }
 
 img {
   max-width: 50%;
+}
+
+h1 {
+  padding: 30px;
+  text-align: center;
+  color: rgb(1, 87, 1);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header-image {
+  width: 50px;
+  height: 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.search-box {
+  text-align: center;
+  margin: 30%;
+}
+
+.search-box2 {
+  width: 20%;
+  align-content: center;
+  text-align: center;
+}
+form {
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.add-player-button {
+  margin: 10px;
+  padding: 2px;
+}
+
+.all-players {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.player-image {
+  width: 25%;
+  height: 25%;
+}
+
+.single-player-details {
+  border: 2px solid rgb(79, 43, 43);
+  background-color: rgb(160, 194, 160);
+  text-align: center;
+  gap: 1ch;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }

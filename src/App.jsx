@@ -8,10 +8,10 @@ function App() {
   return (
     <>
       <NavBar />
-      <NewPlayerForm />
       <Routes>
         <Route path="/" element={<AllPlayers />} />
         <Route path="/players/:id" element={<SinglePlayer />} />
+        <Route path="/NewPlayerForm" element={<NewPlayerForm />} />
       </Routes>
     </>
   );

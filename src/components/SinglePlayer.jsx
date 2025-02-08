@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function SinglePlayer() {
@@ -19,14 +18,14 @@ function SinglePlayer() {
   }, []);
 
   return (
-    <div>
+    <div className="single-player-details">
       <h2>{player?.name}</h2>
-      <p>
+      <p className="details-image">
         <img src={player?.imageUrl} alt={`Image of ${player?.name}`} />
       </p>
-      <p>{player?.breed}</p>
-      <p>{player?.status}</p>
-      <p>Team Number: {player?.teamId}</p>
+      <p><b>Breed: </b>{player?.breed}</p>
+      <p><b>Status: </b>{player?.status}</p>
+      <p><b>Team Number: </b>{player?.teamId}</p>
     </div>
   );
 }
